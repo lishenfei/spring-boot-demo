@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: spring-boot-demo-dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.75.130:3306/springbootdb?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+    username: root
+    password: lishenfei
+    tomcat:
+      max-wait: 10000
+      max-active: 50
+      test-on-borrow: true
+  jpa:
+    hibernate:
+      ddl-auto: update  # 根据实体类自动维护数据库表结构
+    show-sql: true
+  jackson:
+    serialization: true # 控制器输出json字符串格式
+  redis:
+    database: 0 # 使用数据库名，默认为db0
+    host: 192.168.75.130
+    password:
+    port: 6378
+    timeout: 10
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+  thymeleaf:
+    cache: false # Allow Thymeleaf templates to be reloaded at dev time
+
+server:
+  port: 9000
+  context-path: /boot
+
+logging:
+  file: /log/spring-boot-demp.log
+  level.com.lsf.demo.spring.boot.controller: debug
+  level.org.springframework.sucurity: debug
+
+

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-boot-demo-prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.10.62.102:3306/ycc_cinema?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+    username: ycc_cinema
+    password: Cinema_102
+  redis:
+    database: 2
+    host: 10.10.62.102
+    password:
+    port: 6378
+    timeout: 10
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+
+server:
+  port: 8080
+  context-path: /boot
+
+logging:
+  file: /var/log/spring-boot-demp.log
+  level.com.lsf.demo.spring.boot.controller: info
+
