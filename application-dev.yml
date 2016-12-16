@@ -32,6 +32,10 @@ spring:
   batch:
     job:
       enabled: false
+  activemq:
+    broker-url: tcp://192.168.75.130:61616
+    queue:
+      name: my-destination  # 自定义配置项
 
 server:
   port: 9000
