@@ -1,4 +1,4 @@
-package com.lsf.demo.spring.boot.controller;
+package com.lsf.demo.spring.boot.web;
 
 import com.lsf.demo.spring.boot.entity.Msg;
 import org.springframework.stereotype.Controller;

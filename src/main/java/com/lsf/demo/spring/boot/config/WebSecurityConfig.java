@@ -29,7 +29,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/admin/**").hasRole("ADMIN") // ADMIN角色可访问
                 .antMatchers("/user/**").hasAnyRole("ADMIN", "USER")  // ADMIN或USER可访问
-                .anyRequest().authenticated()   // 其他所有请求需要登录后访问
+                .anyRequest().permitAll()
+//                .anyRequest().authenticated()   // 其他所有请求需要登录后访问
                 .and()
                 .formLogin().loginPage("/login").failureUrl("/login?error").permitAll() // 定制登录行为
                 .and()

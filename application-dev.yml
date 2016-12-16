@@ -29,6 +29,9 @@ spring:
       max-wait: -1
   thymeleaf:
     cache: false # Allow Thymeleaf templates to be reloaded at dev time
+  batch:
+    job:
+      enabled: false
 
 server:
   port: 9000
