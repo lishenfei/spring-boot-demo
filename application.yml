@@ -2,8 +2,6 @@ spring:
   profiles:
     active: dev
 
-
-# ----------------------------以下为自定义结构的配置--------------------------
 author: lishenfei
 
 swagger:
