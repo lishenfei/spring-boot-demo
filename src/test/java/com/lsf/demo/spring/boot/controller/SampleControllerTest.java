@@ -21,6 +21,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@Transactional // 测试后的数据回滚
 public class SampleControllerTest {
 
     @Autowired

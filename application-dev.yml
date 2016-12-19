@@ -46,9 +46,19 @@ server:
   port: 9000
   context-path: /boot
 
+# 监控
+management:
+  port: 19000 # 端口，配置为-1可关闭http端口
+#  context-path: /boot/manage # 定制访问路径
+  shell:
+    auth:
+      simple:
+        user:
+          name: lishenfei
+          password: lishenfei
+
 logging:
   file: /log/spring-boot-demp.log
   level.com.lsf.demo.spring.boot.controller: debug
   level.org.springframework.sucurity: debug
-
 
