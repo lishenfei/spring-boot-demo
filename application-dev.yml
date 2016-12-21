@@ -41,6 +41,11 @@ spring:
 #    port: 5672  # 默认为5672
     queue:
       name: my-queue # 自定义配置项
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
 
 server:
   port: 9000
